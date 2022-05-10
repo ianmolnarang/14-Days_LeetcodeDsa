@@ -1,5 +1,6 @@
 // we have total 3 approaches for this theorem but here is the best solution with N time .
 // below for all the test cases
+//kadanes theorem
 
 class Solution
 {
