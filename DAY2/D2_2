@@ -24,3 +24,26 @@ public:
         }
     }
 };
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class Solution
+{
+public:
+    void reverse(vector<int> &arr, int low, int high)
+    {
+        while (low < high)
+        {
+            swap(arr[low], arr[high]);
+            low++;
+            high--;
+        }
+    }
+    void rotate(vector<int> &nums, int k)
+    {
+        // we will reverse the array three times
+        int n = nums.size(); // size of the array
+        k = k % n;           // protection from the overflow
+        reverse(nums, 0, n - k - 1);
+        reverse(nums, n - k, n - 1);
+        reverse(nums, 0, n - 1);
+    }
+};
